@@ -32,16 +32,20 @@ namespace Selenium
             //SelectDropDown OK
             SeleniumSetMethods.SelectDropDown(driver, "pets", "Dog", "Id");
 
-            //Click
-            SeleniumSetMethods.Click(driver, "[class='docs-next button']", "Selector");
-            
+            //Get value from dropdown
+            Console.WriteLine("The value of my dropdown is " + SeleniumGetMethods.GetTextDDL(driver, "pets", "Id"));
+
+            //Get value from class
+            Console.WriteLine("The value of my get text is " + SeleniumGetMethods.GetTextValue(driver, "[class=headerTitleWithLogo]", "CssSelector"));
+
+            //Click OK
+            //SeleniumSetMethods.Click(driver, "[class='docs-next button']", "CssSelector");
+
 
             //Perform Ops sem classe
             //element.SendKeys("teste");
 
             driver.Quit();
-
-            
 
       
         }
